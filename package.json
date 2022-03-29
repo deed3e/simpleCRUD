@@ -1,0 +1,12 @@
+{
+  "name": "simpleCRUD",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tienhung164/simpleCRUD.git",
+  "author": "tienhung164 <hungvt164@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "web3": "^1.7.1"
+  }
+}
