@@ -16,13 +16,6 @@ app.get('/', (req, res) => {
 
 })
 
-app.post('/add', (req, res) => {
-    let name = req.body.name
-    console.log(name)
-    res.redirect('/')
-    
-  })
-
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
