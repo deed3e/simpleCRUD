@@ -139,14 +139,30 @@ $(document).ready(function () {
             "type": "function"
         }
     ]
+
     const addressSM = "0xb96aCAf8506c877840cA7167DBa4E0BB0Ed8C111"
     const web3 = new Web3(window.ethereum)
 
     // create contract connect to metamask
     var contract_MM = new web3.eth.Contract(abi, addressSM)
-    console.log(contract_MM);
+    //console.log(contract_MM);
 
     //create contract connect to infura
+    var provider= new Web3.providers.WebsocketProvider('wss://rinkeby.infura.io/ws/v3/c6f8a6b970484ada801abe28be738310')
+    var web3_infura= new Web3(provider)
+    var contract_Infura = new web3.eth.Contract(abi, addressSM)
+    console.log(contract_Infura)
+
+    contract_Infura.events.Add({
+        filter:{},
+        fromBlock:"latest"
+
+    },function(err,event){
+
+        if(err) console.log(err) 
+        else console.log(event) 
+
+    })
 
     if (typeof window.ethereum !== 'undefined') {
         console.log('MetaMask is installed!')
