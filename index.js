@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3001
 const bodyParser = require('body-parser')
 
 app.use(express.static('public'))
@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 app.post('/add', (req, res) => {
     let name = req.body.name
     console.log(name)
+    res.redirect('/')
     
   })
 

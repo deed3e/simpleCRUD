@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./home.js"></script>
     <script src="./web3/web3.min.js"></script>
     <%
        let users=[1,2,3]
@@ -15,8 +14,10 @@
 </head>
 
 <body>
-
-    <button type="submit" id="connectMM">Connect Meta Mask</button>
+    <div > 
+        <button type="submit" id="connectMM">Connect Meta Mask</button>   
+        <h4 id="address"></h4>   
+    </div>   
     <br>
     <br>
     <h3>Enroll into Block Chain</h3>
@@ -59,6 +60,7 @@
                 <%}%>
         </table>
         <%}%>
+<script src="./home.js"></script>        
 </body>
 
 </html>
